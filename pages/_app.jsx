@@ -4,8 +4,7 @@ import { useRouter } from "next/router";
 import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
 import ChatbotScript from "../components/chatbot";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
+
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   useEffect(() => {
@@ -31,7 +30,7 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
   return (
-    <div className={`${GeistSans.variable} font-sans ${GeistMono.variable}`}>
+    <div className={`font-sans`}>
       <PostHogProvider client={posthog}>
         <Component {...pageProps} />
         <ChatbotScript />
