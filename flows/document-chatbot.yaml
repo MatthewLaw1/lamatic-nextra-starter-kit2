@@ -1,0 +1,44 @@
+triggerNode:
+  nodeId: triggerNode_1
+  nodeType: chatTriggerNode
+  nodeName: Chat Widget
+  values:
+    chat: ''
+    domains:
+      - https://lamatic.ai
+nodes:
+  - nodeId: RAGNode_314
+    nodeType: RAGNode
+    nodeName: RAG
+    values:
+      limit: '3'
+      filters: '[]'
+      messages: '{{triggerNode_1.output.chatHistory}}'
+      vectorDB: ''
+      certainty: '0.7'
+      queryField: '{{triggerNode_1.output.chatMessage}}'
+      systemPrompt: >-
+        You are a helpful AI assistant that answers user queries based on the
+        context provided to you.
+      embeddingModelName: {}
+      generativeModelName:
+        type: embedder/text
+        nodeId: RAGNode
+        model_name: text-embedding-ada-002
+        provider_name: openai
+    needs:
+      - triggerNode_1
+  - nodeId: addNode_930
+    nodeType: addNode
+    nodeName: ''
+    values: {}
+    needs:
+      - RAGNode_314
+responseNode:
+  nodeId: chatResponseNode_842
+  nodeType: chatResponseNode
+  nodeName: Chat Response
+  values:
+    content: '{{RAGNode_314.output.modelResponse}}'
+  needs:
+    - addNode_930

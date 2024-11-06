@@ -14,7 +14,7 @@ const ChatbotScript = () => {
     window.CHAT_DIALOG_CONFIG = {
       botName: process.env.NEXT_PUBLIC_LAMATIC_BOT_NAME || 'Lamatic AI',
       suggestions: process.env.NEXT_PUBLIC_LAMATIC_SUGGESTIONS || ['What is lamatic', 'What is AI', 'What is AI-powered chatbot'],
-      policyUrl: process.env.NEXT_PUBLIC_LAMATIC_POLICY_URL || 'https://lamatic.ai/docs/legal/privacy-policy',
+      policyUrl: 'https://lamatic.ai/docs/legal/privacy-policy',
       apiUrl: process.env.NEXT_PUBLIC_LAMATIC_API_URL,
       workflowId: process.env.NEXT_PUBLIC_LAMATIC_WORKFLOW_ID,
       chatHeaderBgColor: process.env.NEXT_PUBLIC_LAMATIC_CHAT_HEADER_BG_COLOR || 'black',

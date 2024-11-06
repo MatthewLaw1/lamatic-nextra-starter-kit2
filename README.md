@@ -1,10 +1,17 @@
 # Lamatic <> Nextra Docs Starter Kit
 
-This is a template for creating documentation with [Nextra](https://nextra.site) and integrating it with [Lamatic](http://lamatic.ai).
+A powerful documentation template that combines [Nextra](https://nextra.site)'s modern documentation framework with [Lamatic](http://lamatic.ai)'s intelligent AI capabilities. This integration enables dynamic, interactive documentation with built-in AI-powered search and chat features.
 
-<!-- [**Live Demo →**](https://nextra-docs-template.vercel.app) -->
-![Screenshot](.github/screenshot.png)
-<!-- [](https://nextra-docs-template.vercel.app) -->
+## Features
+
+- 🤖 **AI-Powered Chat**: Embedded Lamatic chatbot that helps users find information and answers questions
+- 🔄 **Auto-Indexing**: Automatic documentation indexing through GitHub Actions
+- 📚 **RAG Integration**: Retrieval-Augmented Generation for accurate, context-aware responses
+- ⚡ **Real-time Updates**: Documentation and chatbot automatically stay in sync
+
+This starter kit includes a fully functional example with two key workflows:
+1. A documentation indexing pipeline that maintains an up-to-date vector store of your content (found in the `flows/index-github-actions.yaml` file)
+2. A document-aware chatbot that leverages your documentation to provide intelligent responses (found in the `flows/document-chatbot.yaml` file)
 
 ## Getting Started
 
@@ -23,7 +30,6 @@ You'll need to set up two essential workflows on <a href="https://studio.lamatic
 #### Documentation Indexing Workflow
 - Creates and maintains a vector store of your Nextra documentation
 - Automatically indexes new content when documentation is updated
-- Enables semantic search capabilities
 
 [Add to Lamatic](https://studio.lamatic.ai/_?templateSlug=index-github-actions) <!-- TODO: Replace with actual Lamatic onboarding URL -->
 
@@ -42,7 +48,7 @@ You'll need to set up two essential workflows on <a href="https://studio.lamatic
 Add the following secrets to your GitHub repository:
 
 - `WEBHOOK_URL`: Your Lamatic webhook URL for triggering workflows
-- `WEBHOOK_KEY`: (Optional) API key for secure workflow triggers
+- `WEBHOOK_KEY`: (Optional) API key can be used when using [API as a trigger](https://lamatic.ai/docs/interface/graphql)
 
 > Refer to the [Github documentation](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) for more details.
 
@@ -51,9 +57,16 @@ Add the following secrets to your GitHub repository:
 Configure the following environment variables in your Vercel project settings:
 
 - `NEXT_PUBLIC_LAMATIC_BOT_NAME`: Your chatbot's display name
+- `NEXT_PUBLIC_LAMATIC_API_URL`: Your Lamatic API URL
+- `NEXT_PUBLIC_LAMATIC_WORKFLOW_ID`: Your Lamatic workflow ID
+- `NEXT_PUBLIC_LAMATIC_CHAT_HEADER_BG_COLOR`: Your chatbot's header background color (default: black) (can be any valid CSS color)
 - `NEXT_PUBLIC_LAMATIC_SUGGESTIONS`: Initial suggestions/prompts for users (comma-separated)
+- `NEXT_PUBLIC_LAMATIC_IMAGE_URL`: Your chatbot's image URL (default: Lamatic logo)
+- `NEXT_PUBLIC_LAMATIC_POSITION`: Your chatbot's position (default: right) (can be left or right)
+- `NEXT_PUBLIC_LAMATIC_FLOATING_BUTTON_ICON`: Your chatbot's floating button icon (default: help-circle.svg) (can be any valid image URL)
+- `NEXT_PUBLIC_LAMATIC_ERROR_MESSAGE`: Your chatbot's error message (default: Some error has taken place)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fyour-username%2Flamatic-nextra-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2FLamatic%2Flamatic-nextra-starter-kit)
 
 ## Local Development
 

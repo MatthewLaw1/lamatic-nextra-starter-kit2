@@ -1,0 +1,71 @@
+triggerNode:
+  nodeId: triggerNode_1
+  nodeType: webhookTriggerNode
+  nodeName: Github Action Webhook
+  values: {}
+nodes:
+  - nodeId: chunkNode_860
+    nodeType: chunkNode
+    nodeName: Chunking
+    values:
+      chunkField: '{{triggerNode_1.output.content}}'
+      numOfChars: 1000
+      separators:
+        - |+
+
+
+        - |+
+
+        - ' '
+      chunkingType: recursiveCharacterTextSplitter
+      overlapChars: 100
+    needs:
+      - triggerNode_1
+  - nodeId: vectorizeNode_814
+    nodeType: vectorizeNode
+    nodeName: Vectorize
+    values:
+      inputText: '{{chunkNode_860.output.chunks[:].pageContent}}'
+      embeddingModelName: {}
+      generativeModelName:
+        type: embedder/text
+        nodeId: vectorizeNode
+        model_name: text-embedding-ada-002
+        provider_name: openai
+    needs:
+      - chunkNode_860
+  - nodeId: IndexNode_998
+    nodeType: IndexNode
+    nodeName: Index
+    values:
+      vectorDB: ''
+      primaryKeys: ''
+      vectorsField: '{{codeNode_443.output.vectors}}'
+      metadataField: '{{codeNode_443.output.metadata}}'
+      duplicateOperation: overwrite
+    needs:
+      - codeNode_443
+  - nodeId: addNode_917
+    nodeType: addNode
+    nodeName: ''
+    values: {}
+    needs:
+      - IndexNode_998
+  - nodeId: codeNode_443
+    nodeType: codeNode
+    nodeName: Prepare Metadata
+    values:
+      code: |-
+        let vectors = {{vectorizeNode_814.output.vectors}};
+          let metadataProps = [];
+          let texts = {{chunkNode_860.output.chunks}};
+          
+          for (const idx in vectors) {
+              let metadata = {}
+              metadata["content"] = texts[idx].pageContent;
+              metadata["file_name"] = {{triggerNode_1.output.filename}};
+              metadataProps.push(metadata)
+          }
+        output = {"metadata": metadataProps, "vectors": vectors};
+    needs:
+      - vectorizeNode_814
