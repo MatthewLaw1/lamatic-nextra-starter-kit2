@@ -2,6 +2,7 @@
 
 A powerful documentation template that combines [Nextra](https://nextra.site)'s modern documentation framework with [Lamatic](http://lamatic.ai)'s intelligent AI capabilities. This integration enables dynamic, interactive documentation with built-in AI-powered chat features.
 
+![Screenshot](./public/screenshot.png)
 ## Features
 
 - 🤖 **AI-Powered Chat**: Embedded Lamatic chatbot that helps users find information and answers questions
