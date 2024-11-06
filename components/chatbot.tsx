@@ -11,9 +11,14 @@ declare global {
 const ChatbotScript = () => {
   useEffect(() => {
     // Configure chat dialog
+    let envSuggestions = process.env.NEXT_PUBLIC_LAMATIC_SUGGESTIONS;
+    let suggestions = [];
+    if (envSuggestions) {
+      suggestions = envSuggestions.split(',');
+    }
     window.CHAT_DIALOG_CONFIG = {
       botName: process.env.NEXT_PUBLIC_LAMATIC_BOT_NAME || 'Lamatic AI',
-      suggestions: process.env.NEXT_PUBLIC_LAMATIC_SUGGESTIONS || ['What is lamatic', 'What is AI', 'What is AI-powered chatbot'],
+      suggestions: suggestions,
       policyUrl: 'https://lamatic.ai/docs/legal/privacy-policy',
       apiUrl: process.env.NEXT_PUBLIC_LAMATIC_API_URL,
       workflowId: process.env.NEXT_PUBLIC_LAMATIC_FLOW_ID,

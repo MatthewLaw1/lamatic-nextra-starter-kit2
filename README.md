@@ -66,7 +66,8 @@ Configure the following environment variables in your Vercel project settings:
 - `NEXT_PUBLIC_LAMATIC_FLOATING_BUTTON_ICON`: Your chatbot's floating button icon (default: help-circle.svg) (can be any valid image URL)
 - `NEXT_PUBLIC_LAMATIC_ERROR_MESSAGE`: Your chatbot's error message (default: Some error has taken place)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2FLamatic%2Flamatic-nextra-starter-kit)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLamatic%2Flamatic-nextra-starter-kit.git&env=NEXT_PUBLIC_LAMATIC_BOT_NAME,NEXT_PUBLIC_LAMATIC_API_URL,NEXT_PUBLIC_LAMATIC_FLOW_ID,NEXT_PUBLIC_LAMATIC_CHAT_HEADER_BG_COLOR,NEXT_PUBLIC_LAMATIC_SUGGESTIONS,NEXT_PUBLIC_LAMATIC_IMAGE_URL,NEXT_PUBLIC_LAMATIC_POSITION,NEXT_PUBLIC_LAMATIC_FLOATING_BUTTON_ICON,NEXT_PUBLIC_LAMATIC_ERROR_MESSAGE&project-name=lamatic-nextra-starter-kit&repository-name=lamatic-nextra-starter-kit)
+
 
 ## Local Development
 
