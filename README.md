@@ -2,17 +2,17 @@
 
 This is a template for creating documentation with [Nextra](https://nextra.site) and integrating it with [Lamatic](http://lamatic.ai).
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
-
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+<!-- [**Live Demo →**](https://nextra-docs-template.vercel.app) -->
+![Screenshot](.github/screenshot.png)
+<!-- [](https://nextra-docs-template.vercel.app) -->
 
 ## Getting Started
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/lamatic-nextra-starter.git
-cd lamatic-nextra-starter
+git clone https://github.com/Lamatic/lamatic-nextra-starter-kit.git
+cd lamatic-nextra-starter-kit
 ```
 
 ### 2. Configure Lamatic Workflows
