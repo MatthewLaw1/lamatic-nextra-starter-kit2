@@ -27,18 +27,18 @@ cd lamatic-nextra-starter-kit
 You'll need to set up two essential flows on <a href="https://studio.lamatic.ai/" target="_blank" rel="noopener noreferrer">Lamatic</a>:
 
 
-#### Documentation Indexing Workflow
+#### 2.1 Documentation Indexing Flow
 - Creates and maintains a vector store of your Nextra documentation
 - Automatically indexes new content when documentation is updated
 
-[Add to Lamatic](https://studio.lamatic.ai/_?templateSlug=index-github-actions) <!-- TODO: Replace with actual Lamatic onboarding URL -->
+[![Add to Lamatic](https://api.lamatic.ai/storage/v1/object/public/icons/lamatic-deploy.svg)](https://studio.lamatic.ai/_?templateSlug=index-github-action)
 
-#### RAG-Enhanced Chatbot Workflow
+#### 2.2 RAG-Enhanced Chatbot Flow
 - Implements Retrieval-Augmented Generation (RAG) for accurate responses
 - Utilizes the indexed documentation to provide context-aware answers
 - Handles user queries with documentation-specific knowledge
 
-[Add to Lamatic](https://studio.lamatic.ai/_?templateSlug=document-chatbot-widget) <!-- TODO: Replace with actual Lamatic onboarding URL -->
+[![Add to Lamatic](https://api.lamatic.ai/storage/v1/object/public/icons/lamatic-deploy.svg)](https://studio.lamatic.ai/_?templateSlug=document-chatbot-widget)
 
 > Refer to the [Lamatic documentation](https://lamatic.ai/docs/flows/editor) for more details.
 
@@ -58,7 +58,7 @@ Configure the following environment variables in your Vercel project settings:
 
 - `NEXT_PUBLIC_LAMATIC_BOT_NAME`: Your chatbot's display name
 - `NEXT_PUBLIC_LAMATIC_API_URL`: Your Lamatic API URL
-- `NEXT_PUBLIC_LAMATIC_WORKFLOW_ID`: Your Lamatic workflow ID
+- `NEXT_PUBLIC_LAMATIC_FLOW_ID`: Your Lamatic flow ID
 - `NEXT_PUBLIC_LAMATIC_CHAT_HEADER_BG_COLOR`: Your chatbot's header background color (default: black) (can be any valid CSS color)
 - `NEXT_PUBLIC_LAMATIC_SUGGESTIONS`: Initial suggestions/prompts for users (comma-separated)
 - `NEXT_PUBLIC_LAMATIC_IMAGE_URL`: Your chatbot's image URL (default: Lamatic logo)

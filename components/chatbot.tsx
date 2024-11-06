@@ -16,7 +16,7 @@ const ChatbotScript = () => {
       suggestions: process.env.NEXT_PUBLIC_LAMATIC_SUGGESTIONS || ['What is lamatic', 'What is AI', 'What is AI-powered chatbot'],
       policyUrl: 'https://lamatic.ai/docs/legal/privacy-policy',
       apiUrl: process.env.NEXT_PUBLIC_LAMATIC_API_URL,
-      workflowId: process.env.NEXT_PUBLIC_LAMATIC_WORKFLOW_ID,
+      workflowId: process.env.NEXT_PUBLIC_LAMATIC_FLOW_ID,
       chatHeaderBgColor: process.env.NEXT_PUBLIC_LAMATIC_CHAT_HEADER_BG_COLOR || 'black',
       imageUrl: process.env.NEXT_PUBLIC_LAMATIC_IMAGE_URL || 'https://owcowialbyyyniqocppr.supabase.co/storage/v1/object/public/icons/Lamatic.svg',
       position: process.env.NEXT_PUBLIC_LAMATIC_POSITION || 'right',
