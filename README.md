@@ -31,14 +31,14 @@ You'll need to set up two essential flows on <a href="https://studio.lamatic.ai/
 - Creates and maintains a vector store of your Nextra documentation
 - Automatically indexes new content when documentation is updated
 
-[![Add to Lamatic](https://api.lamatic.ai/storage/v1/object/public/icons/lamatic-deploy.svg)](https://studio.lamatic.ai/_?templateSlug=index-github-action)
+[![Add to Lamatic](https://api.lamatic.ai/storage/v1/object/public/icons/lamatic-deploy-icon.svg)](https://studio.lamatic.ai/_?templateSlug=index-github-action)
 
 #### 2.2 RAG-Enhanced Chatbot Flow
 - Implements Retrieval-Augmented Generation (RAG) for accurate responses
 - Utilizes the indexed documentation to provide context-aware answers
 - Handles user queries with documentation-specific knowledge
 
-[![Add to Lamatic](https://api.lamatic.ai/storage/v1/object/public/icons/lamatic-deploy.svg)](https://studio.lamatic.ai/_?templateSlug=document-chatbot-widget)
+[![Add to Lamatic](https://api.lamatic.ai/storage/v1/object/public/icons/lamatic-deploy-icon.svg)](https://studio.lamatic.ai/_?templateSlug=document-chatbot-widget)
 
 > Refer to the [Lamatic documentation](https://lamatic.ai/docs/flows/editor) for more details.
 
